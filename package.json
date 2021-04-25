@@ -1,0 +1,19 @@
+{
+  "name": "plataformaperguntas",
+  "version": "1.0.0",
+  "description": "Node com HTML/CSS e botstrap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduardaarosaa/ProjetoPlataformaPerguntas.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eduardaarosaa/ProjetoPlataformaPerguntas/issues"
+  },
+  "homepage": "https://github.com/eduardaarosaa/ProjetoPlataformaPerguntas#readme"
+}
