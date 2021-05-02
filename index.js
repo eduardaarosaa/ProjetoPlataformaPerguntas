@@ -4,14 +4,16 @@ const app = express();
 //Setando que o motor de HTML será a EJS
 app.set('view engine', 'ejs');
 
-app.get("/",(req, res)=>{
-    var nome = 'Duda'; 
-    var lang = 'PHP';
+app.get("/:nome/:lang",(req, res)=>{
+    var nome =  req.params.nome; 
+    var lang = req.params.lang;
+    var exibirMensagem = true;
     res.render('index', 
     {
      nome: nome ,
      lang: lang,
-     profissao: 'Developer'
+     profissao: 'Developer', 
+     msg: exibirMensagem
     });
 });
 
