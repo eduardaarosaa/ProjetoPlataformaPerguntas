@@ -5,7 +5,14 @@ const app = express();
 app.set('view engine', 'ejs');
 
 app.get("/",(req, res)=>{
-    res.send("Bem vindo!");
+    var nome = 'Duda'; 
+    var lang = 'PHP';
+    res.render('index', 
+    {
+     nome: nome ,
+     lang: lang,
+     profissao: 'Developer'
+    });
 });
 
 app.listen(8080,()=>{
