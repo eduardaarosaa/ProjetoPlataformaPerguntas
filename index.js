@@ -1,10 +1,17 @@
 const express = require('express');
 
 const app = express();
-//Setando que o motor de HTML será a EJS
+
+//Chamando o bodyParser
+const bodyParser = require("body-parser");
+
+//Setando que o motor de HTML serï¿½ a EJS
 app.set('view engine', 'ejs');
 //Setando para aceitar a pasta dos conteudos estaticos.
 app.use(express.static('public'));
+
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
 
 app.get("/",(req, res)=>{
     res.render('index');
@@ -13,6 +20,12 @@ app.get("/",(req, res)=>{
 app.get("/perguntar",(req, res)=>{
     res.render('perguntar');
 });
-app.listen(8080,()=>{
+
+app.post("/salvarPergunta", (req, res) =>{
+    res.send("FormulÃ¡rio Recebido!");
+});
+
+
+app.listen(4000,()=>{
     console.log('App rodando!');
 });
