@@ -3,23 +3,16 @@
         <head>
             <meta charset="UTF-8">
             <link rel="stylesheet" href="/css/style.css">
+            <link rel="stylesheet" href="/css/bootstrap.min.css">
+            
         </head>
         <body>
-            <h1>Guia Perguntas</h1>
-            <!--<%= %> Exibir valor da variavel no HTML -->
-            <%= nome %>
-            <p><%= lang %> </p>
-            <% if(msg == true){ %>
-                <h3>Exibindo uma mensagem!</h3>
-           <%} else {%>
-                <h3>Caiu no else - false</h3>
-            <%}%>
-
-            <% produtos.forEach(function(produto){ %>
-                <hr>
-                <%= produto.nome %><br>
-                <%= produto.preco %>
-            <% }) %>
-            <img src="/img/img-teste.jpg">
+            <h1>Testando o bootstrap </h1>
+            
+          
         </body>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        
     </html>

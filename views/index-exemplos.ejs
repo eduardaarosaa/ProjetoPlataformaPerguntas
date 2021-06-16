@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <link rel="stylesheet" href="/css/style.css">
+        </head>
+        <body>
+            <h1>Guia Perguntas</h1>
+            <!--<%= %> Exibir valor da variavel no HTML -->
+            <%= nome %>
+            <p><%= lang %> </p>
+            <% if(msg == true){ %>
+                <h3>Exibindo uma mensagem!</h3>
+           <%} else {%>
+                <h3>Caiu no else - false</h3>
+            <%}%>
+
+            <% produtos.forEach(function(produto){ %>
+                <hr>
+                <%= produto.nome %><br>
+                <%= produto.preco %>
+            <% }) %>
+            <img src="/img/img-teste.jpg">
+        </body>
+    </html>
