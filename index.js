@@ -11,7 +11,7 @@ app.get("/",(req, res)=>{
 });
 
 app.get("/perguntar",(req, res)=>{
-    res.render();
+    res.render('perguntar');
 });
 app.listen(8080,()=>{
     console.log('App rodando!');
