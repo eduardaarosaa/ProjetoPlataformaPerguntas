@@ -22,7 +22,12 @@ app.get("/perguntar",(req, res)=>{
 });
 
 app.post("/salvarPergunta", (req, res) =>{
-    res.send("Formulário Recebido!");
+
+    var titulo = req.body.titulo;
+    var descricao = req.body.descricao;
+
+    res.send("Formulário Recebido! titulo"+ titulo + " " + " descricao" + descricao);
+
 });
 
 
