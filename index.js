@@ -5,6 +5,19 @@ const app = express();
 //Chamando o bodyParser
 const bodyParser = require("body-parser");
 
+const connection = require ('./public/database/database');
+
+//database
+
+connection
+    .authenticate()
+    .then(() => {
+        console.log("Conexão feita com banco de dados");
+    })
+    .catch((msgErro)=> {
+        console.log(msgErro , 'maracuja');
+    })
+
 //Setando que o motor de HTML ser� a EJS
 app.set('view engine', 'ejs');
 //Setando para aceitar a pasta dos conteudos estaticos.
@@ -31,6 +44,6 @@ app.post("/salvarPergunta", (req, res) =>{
 });
 
 
-app.listen(4000,()=>{
+app.listen(5000,()=>{
     console.log('App rodando!');
 });
