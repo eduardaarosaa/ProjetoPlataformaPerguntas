@@ -7,6 +7,8 @@ const bodyParser = require("body-parser");
 
 const connection = require ('./public/database/database');
 
+const perguntaModel = require('./public/database/Pergunta');
+
 //database
 
 connection
@@ -15,10 +17,10 @@ connection
         console.log("Conexão feita com banco de dados");
     })
     .catch((msgErro)=> {
-        console.log(msgErro , 'maracuja');
+        console.log(msgErro);
     })
 
-//Setando que o motor de HTML ser� a EJS
+//Setando que o motor de HTML será EJS
 app.set('view engine', 'ejs');
 //Setando para aceitar a pasta dos conteudos estaticos.
 app.use(express.static('public'));
