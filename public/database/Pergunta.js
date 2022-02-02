@@ -8,7 +8,7 @@ const connection = require("./database");
 
 //Definir o model 
 
-const Pergunta = connection.define('pergunta', {
+const Pergunta = connection.define('perguntas', {
     titulo:{
         type:Sequelize.STRING,
         allowNull: false //Impede que esse campo recebe null
@@ -19,6 +19,7 @@ const Pergunta = connection.define('pergunta', {
     }
 });
 
-Pergunta.sync({force:false}).then(()=>{
+Pergunta.sync({force:false}).then(()=>{});
 
-})
+
+module.exports = Pergunta;

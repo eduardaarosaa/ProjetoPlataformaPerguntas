@@ -2,7 +2,27 @@
         <body>
             <%- include("partials/navbar.ejs") %>
             <div class="container">
-                <h1>Testando o bootstrap </h1>
+                <hr>
+                <h1>Perguntas</h1>
+                <hr>
+                <a href="/perguntar"><button class="btn btn-primary">Perguntar</button></a>
+                <br>
+                <hr>
+                <!--Passando as informações da tabela na tela -->
+              <% perguntas.forEach(pergunta => { %>
+                <br>
+                <div class="card">
+                    <div class="card-body">
+                        <h3><%= pergunta.titulo %></h3>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/pergunta/<%=pergunta.id%>">
+                            <button class="btn btn-primary">Responder</button>
+                        </a>
+                    </div>
+                </div>
+                <br>
+              <% }) %>
             </div>
         </body>
 <%- include ("partials/footer.ejs") %>
